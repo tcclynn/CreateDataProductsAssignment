@@ -3,6 +3,8 @@ shinyUI(
     pageWithSidebar(
     headerPanel("Monthly Mortgage Calculator for Fixed-rate Loan"),
     sidebarPanel(
+        h5('Please populate the Principal Amount, Interest Rate and Loan Term. Then press the "Submit" button. The application will tabulate your monthly mortgage amount',
+           align="left"),
         numericInput('id_principal', 'Principal', 0, min = 150000, max = 2000000, step = 25000),
         numericInput('id_interest', 'Interest Rate(%)', 0, min = 0, max = 100, step = 0.2),
         checkboxGroupInput("id_years", "Loan Term(years)",
